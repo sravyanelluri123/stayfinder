@@ -1,0 +1,4 @@
+import Link from 'next/link';import type {Property} from '@/lib/types';import FavButton from './FavButton';
+export default function PropertyCard({p,fav}:{p:Property;fav:boolean}){return(
+<Link href={`/property/${p.id}`} className="card group block overflow-hidden"><div className="relative aspect-[4/3] overflow-hidden"><img src={p.images[0]} alt={p.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105"/><FavButton id={p.id} initial={fav}/></div>
+<div className="p-4"><div className="flex justify-between"><h3 className="font-semibold">{p.title}</h3><span className="text-sm">★ {p.rating}</span></div><p className="text-sm text-gray-500">{p.city}, {p.country}</p><p className="mt-2"><b>${p.price_per_night}</b> <span className="text-sm text-gray-500">/ night</span></p></div></Link>)}

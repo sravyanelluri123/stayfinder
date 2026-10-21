@@ -1,0 +1,1 @@
+export type Property={id:string;title:string;description:string;city:string;country:string;price_per_night:number;property_type:string;category:string;capacity:number;amenities:string[];images:string[];rating:number;review_count:number};
